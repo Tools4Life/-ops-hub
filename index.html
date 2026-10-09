@@ -239,6 +239,10 @@ nav button svg{transition:transform .35s cubic-bezier(.3,1.6,.5,1)}
   .read .rb{font-size:16.5px}
   .toast{bottom:32px}
 }
+
+/* no double-tap zoom (pinch-to-zoom still works); no auto-zoom when tapping into a field on iPhone */
+html{touch-action:manipulation}
+@media (pointer:coarse){input,select,textarea{font-size:max(16px,1em)}}
 </style>
 </head>
 <body>
